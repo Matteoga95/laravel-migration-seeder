@@ -22,7 +22,7 @@ class trainSeeder extends Seeder
             $train->stazione_di_partenza = $faker->city();
             $train->orario_di_arrivo = $faker->time();
             $train->codice_treno = $faker->bothify("#######");
-            $train->numero_carrozze = $faker->random_int(1, 9);
+            $train->numero_carrozze = $faker->numberBetween(1, 9);
         }
         for ($i = 0; $i < 5; $i++) {
             $train = new train();
@@ -30,7 +30,7 @@ class trainSeeder extends Seeder
             $train->stazione_di_arrivo = $faker->city();
             $train->orario_di_partenza = $faker->time();
             $train->codice_treno = $faker->bothify("#######");
-            $train->numero_carrozze = $faker->random_int(1, 9);
+            $train->numero_carrozze = $faker->numberBetween(1, 9);
         }
     }
 }
