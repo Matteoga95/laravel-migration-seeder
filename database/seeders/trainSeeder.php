@@ -23,6 +23,7 @@ class trainSeeder extends Seeder
             $train->orario_di_arrivo = $faker->time();
             $train->codice_treno = $faker->bothify("#######");
             $train->numero_carrozze = $faker->numberBetween(1, 9);
+            $train->save();
         }
         for ($i = 0; $i < 5; $i++) {
             $train = new train();
@@ -31,6 +32,7 @@ class trainSeeder extends Seeder
             $train->orario_di_partenza = $faker->time();
             $train->codice_treno = $faker->bothify("#######");
             $train->numero_carrozze = $faker->numberBetween(1, 9);
+            $train->save();
         }
     }
 }
